@@ -1,6 +1,6 @@
 {
   "name": "@shapeshiftoss/bnb-javascript-sdk",
-  "version": "4.2.0-shapeshift.0",
+  "version": "4.2.0-shapeshift.1",
   "license": "Apache-2.0",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
