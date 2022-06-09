@@ -56,7 +56,6 @@ The Binance Chain client.
 * [useAsyncBroadcast](bncclient.md#useasyncbroadcast)
 * [useDefaultBroadcastDelegate](bncclient.md#usedefaultbroadcastdelegate)
 * [useDefaultSigningDelegate](bncclient.md#usedefaultsigningdelegate)
-* [useLedgerSigningDelegate](bncclient.md#useledgersigningdelegate)
 
 ## Constructors
 
@@ -855,23 +854,5 @@ ___
 Applies the default signing delegate.
 
 **Returns:** *[BncClient](bncclient.md)*
-
-this instance (for chaining)
-
-___
-
-###  useLedgerSigningDelegate
-
-▸ **useLedgerSigningDelegate**(...`args`: Parameters‹typeof LedgerSigningDelegate›): *this*
-
-Applies the Ledger signing delegate.
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`...args` | Parameters‹typeof LedgerSigningDelegate› |
-
-**Returns:** *this*
 
 this instance (for chaining)

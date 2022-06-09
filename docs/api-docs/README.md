@@ -7,7 +7,6 @@
 
 * [BncClient](classes/bncclient.md)
 * [Bridge](classes/bridge.md)
-* [LedgerApp](classes/ledgerapp.md)
 * [RpcClient](classes/rpcclient.md)
 * [Stake](classes/stake.md)
 * [TokenManagement](classes/tokenmanagement.md)
@@ -17,7 +16,6 @@
 
 * [DefaultBroadcastDelegate](README.md#const-defaultbroadcastdelegate)
 * [DefaultSigningDelegate](README.md#const-defaultsigningdelegate)
-* [LedgerSigningDelegate](README.md#const-ledgersigningdelegate)
 * [ab2hexstring](README.md#const-ab2hexstring)
 * [ab2str](README.md#const-ab2str)
 * [calInputCoins](README.md#const-calinputcoins)
@@ -119,53 +117,6 @@ Name | Type | Description |
 `signMsg?` | any | the canonical sign bytes for the msg |
 
 **Returns:** *Promise‹[Transaction](classes/transaction.md)›*
-
-___
-
-### `Const` LedgerSigningDelegate
-
-▸ **LedgerSigningDelegate**(`ledgerApp`: [LedgerApp](classes/ledgerapp.md), `preSignCb`: function, `postSignCb`: function, `errCb`: function, `hdPath`: number[]): *typeof DefaultSigningDelegate*
-
-The Ledger signing delegate.
-
-**Parameters:**
-
-▪ **ledgerApp**: *[LedgerApp](classes/ledgerapp.md)*
-
-▪ **preSignCb**: *function*
-
-▸ (`preSignCb`: Buffer): *void*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`preSignCb` | Buffer |
-
-▪ **postSignCb**: *function*
-
-▸ (`pubKeyResp`: PublicKey, `sigResp`: SignedSignature): *void*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`pubKeyResp` | PublicKey |
-`sigResp` | SignedSignature |
-
-▪ **errCb**: *function*
-
-▸ (`error`: any): *void*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`error` | any |
-
-▪ **hdPath**: *number[]*
-
-**Returns:** *typeof DefaultSigningDelegate*
 
 ___
 

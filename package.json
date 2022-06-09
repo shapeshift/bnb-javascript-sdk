@@ -9,8 +9,6 @@
   ],
   "scripts": {
     "test": "cross-env NODE_ENV=test jest",
-    "test:ledger": "qunit --require babel-polyfiltypl tests-ledger/tests.js",
-    "test:ledger:browser": "./tests-ledger/run-browser-tests.sh",
     "build": "rimraf lib && tsc --emitDeclarationOnly && babel --extensions '.ts' src -d lib",
     "build:docs": "rimraf docs/api-docs && typedoc --excludeExternals --excludeNotDocumented --readme none --out docs/api-docs --hideBreadcrumbs --disableSources",
     "prepublishOnly": "npm run build",
@@ -20,15 +18,12 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.10.4",
-    "@ledgerhq/hw-transport-u2f": "^5.9.0",
-    "@ledgerhq/hw-transport-web-ble": "^5.9.0",
     "@types/bech32": "^1.1.2",
     "@types/big.js": "^4.0.5",
     "@types/bn.js": "^4.11.6",
     "@types/crypto-js": "^3.1.43",
     "@types/elliptic": "^6.4.12",
     "@types/jest": "^25.1.4",
-    "@types/ledgerhq__hw-transport": "^4.21.2",
     "@types/lodash": "^4.14.149",
     "@types/node": "^13.9.0",
     "@types/pumpify": "^1.4.1",
@@ -58,9 +53,6 @@
     "uuid": "^3.3.2",
     "websocket-stream": "^5.5.0"
   },
-  "optionalDependencies": {
-    "@ledgerhq/hw-transport-node-hid": "^5.10.0"
-  },
   "devDependencies": {
     "@babel/cli": "^7.10.4",
     "@babel/core": "^7.10.4",
@@ -75,7 +67,6 @@
     "@types/crypto-js": "^3.1.43",
     "@types/elliptic": "^6.4.12",
     "@types/jest": "^25.1.4",
-    "@types/ledgerhq__hw-transport": "^4.21.2",
     "@types/lodash": "^4.14.149",
     "@types/node": "^13.9.0",
     "@types/pumpify": "^1.4.1",

@@ -1,6 +1,3 @@
-tests-ledger/ledger-bundle.js
-tests-ledger/buffer-polyfill.js
-
 *.pem
 
 # Binaries for programs and plugins
