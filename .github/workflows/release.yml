@@ -1,0 +1,40 @@
+name: Build, Bump Version, & Release
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  publish:
+    name: Build, Bump Version, & Release
+    runs-on: ubuntu-latest
+    environment: master
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+          submodules: recursive
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+          cache: 'yarn'
+          registry-url: 'https://registry.npmjs.org'
+      - name: Install
+        run: yarn install --frozen-lockfile
+      - name: Build
+        run: yarn build
+      - name: Build Documentation
+        run: yarn build:docs
+      - name: Bump Version
+        run: |
+          git config --global user.name "shapeshift" &&
+          yarn version --message "publish v%s [skip ci]" --prerelease --preid shapeshift &&
+          git push --follow-tags
+      - name: Release
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: yarn publish --access public

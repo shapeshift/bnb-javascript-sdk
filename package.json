@@ -1,6 +1,6 @@
 {
-  "name": "@binance-chain/javascript-sdk",
-  "version": "0.0.0-development",
+  "name": "@shapeshiftoss/bnb-javascript-sdk",
+  "version": "4.2.0-shapeshift.0",
   "license": "Apache-2.0",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
